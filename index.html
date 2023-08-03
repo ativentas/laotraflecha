@@ -1,0 +1,522 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>LA OTRA FLECHA</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+/*  body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+*/
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  //height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav ul li{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.JC {
+  color: blue;
+}
+
+.JC p {
+  color: initial;
+}
+
+.Laura {
+  color:red;
+}
+
+.Laura p {
+  color: initial;
+}
+
+button {
+       top:10%;
+       left:10%;
+       margin-bottom: 2%;
+       width:100px;
+       }
+
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+article {
+  display:none;
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  font-size: 20px;
+  //height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<header>
+  <h2>Academia La Otra Flecha</h2>
+  <p>v1.1</p>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li id="itemCF"><a href="#">Contabilidad Financiera</a></li>
+      <li id="itemCS"><a href="#">Contabilidad Sociedades</a></li>
+      <li id="itemMF"><a href="#">Matemática Financiera</a></li>    
+      <li id="itemLaura"><a href="#">Clases Laura</a></li>
+      <li id="itemAvanzado"><a href="#">Clases Curso Avanzado</a></li>
+    </ul>
+  </nav>
+
+
+
+  <article id="articuloLaura">
+    <h1 id="titulo">Videos Laura</h1>
+     <div id="bloc1" class="btn-group">
+      <button type="button" onclick = "expandirtodo()" style="margin-right:10px;border-radius: 50%;width:50px;text-align: center;padding:10px;">&#x25BC;</button>
+      <button type="button" onclick = "contraertodo()" style="margin-right:10px;border-radius: 50%;width:50px;text-align: center;padding:10px;">&#x25B2;</button>
+    </div>   
+
+    <details class="Laura">
+    <summary>01-09-22 <a href="https://player.vimeo.com/video/745395769" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/745396518" target="_blank">Parte 2</a></summary>
+    <p>Explicacion de capitalización, descuentos y equivalencias de tantos de interés.</p>
+    <p>Explicación del PGC, marco conceptual y NV 2-3-4</p>
+    </details>
+    <details class="Laura">
+    <summary>08-09-22 <a href="https://player.vimeo.com/video/747631448" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/747631464" target="_blank">Parte 2</a></summary>
+    <p>tema de los descuentos y resolveremos algunos ejemplos del manual.</p>
+    <p>explicación de la NRV2 Inmovilizado Material, desde el supuesto 5 en adelante.</p>
+    </details> 
+    <details class="Laura">
+    <summary>12-09-22 <a href="https://player.vimeo.com/video/748762364" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/748762374" target="_blank">Parte 2</a></summary>
+    <p>supuestos 1 a 6 de la hoja de ejercicios de matemáticas.</p>
+    <p>NRV2 Inmovilizado Material, desde el supuesto 11 en adelante.</p>
+    </details> 
+    <details class="Laura">
+    <summary>15-09-22 <a href="https://player.vimeo.com/video/749956801" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/749956811" target="_blank">Parte 2</a></summary>
+    <p>supuestos 7 a 11 de la hoja de ejercicios de matemáticas.</p>
+    <p> explicación de la NRV3 sobre las normas particulares del Inm.Material, desde el supuesto 22 en adelante.</p>
+    </details> 
+    <details class="Laura">
+    <summary>22-09-22 <a href="https://player.vimeo.com/video/752520192" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/752520210" target="_blank">Parte 2</a></summary>
+    <p>documento del cálculo del TAE.</p>
+    <p>Comenzaremos la explicación de las Rentas.</p>
+    </details> 
+    <details class="Laura">
+    <summary>26-09-22 <a href="https://player.vimeo.com/video/753827767" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/753827779" target="_blank">Parte 2</a></summary>
+    <p>explicación de Rentas y resolveremos los ejemplos 2, 3 y 4.</p>
+    <p>colección de supuestos propuestos de las NRV2-4, desde el supuesto 15.</p>
+    </details> 
+    <details class="Laura">
+    <summary>29-09-22 <a href="https://player.vimeo.com/video/755104496" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/755104510" target="_blank">Parte 2</a></summary>
+    <p>explicación de Rentas y resolveremos los ejemplos 5 y 6.</p>
+    <p>resolución del supuesto propuesto nº3 de las NRV2-4, y supuestos 18 y 19 del documento teórico.Comenzaremos el estudio de las NRV5-6 referidas al Inmovilizado Intangible.</p>
+    </details> 
+  </article>
+       <!--PARA CLASES LAURA
+
+    <details class="Laura">
+    <summary>xxx <a href="xxx" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="xxx" target="_blank">Parte 2</a></summary>
+    <p>xxx</p>
+    </details>    
+
+     -->
+  <article id="articuloAvanzado">
+    <h1>Videos Avanzados</h1>
+     <div id="bloc1" class="btn-group">
+      <button type="button" onclick = "expandirtodo()" style="margin-right:10px;border-radius: 50%;width:50px;text-align: center;padding:10px;">&#x25BC;</button>
+      <button type="button" onclick = "contraertodo()" style="margin-right:10px;border-radius: 50%;width:50px;text-align: center;padding:10px;">&#x25B2;</button>
+    </div>          
+
+    <details class="JC" >
+    <summary>05-07-23 <a href="https://player.vimeo.com/video/842625072" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/842625093" target="_blank">Parte 2</a></summary>
+    <p>CONTABILIDAD FINANCIERA: NRV 2 Y 4</p>
+    </details>
+    <details class="JC">
+    <summary>07-07-23 <a href="https://player.vimeo.com/video/843333830" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/843438168" target="_blank">Parte 2</a></summary>
+    <p>RESOLUCIÓN DEL EXAMEN OFICIAL DE AUDITORÍA. RESOLUCIÓN 14-02-2023. SEGUNDO EJERCICIO (01-07-2023).</p>
+    </details>    
+    <details class="JC">
+    <summary>12-07-23 <a href="https://player.vimeo.com/video/844733947" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/844733961" target="_blank">Parte 2</a></summary>
+    <p>Contabilidad Financiera: Terminaremos los ejercicios de la NRV 2 y 3 y veremos los ejercicios de la NRV 5 y 6.</p>
+    </details>
+    <details class="JC">
+    <summary>19-07-23 <a href="https://player.vimeo.com/video/846735973" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/846735990" target="_blank">Parte 2</a></summary>
+    <p>Contabilidad Financiera: Terminaremos los ejercicios de la NRV 2 y 3. Veremos los ejercicios de la NRV 5 y 6. Empezaremos los ejercicios de la NRV 7.</p>
+    </details>
+    <details class="JC">
+    <summary>26-07-23 <a href="https://player.vimeo.com/video/848860557" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="https://player.vimeo.com/video/848860578" target="_blank">Parte 2</a></summary>
+    <p>Contabilidad Financiera: Terminaremos los ejercicios de la NRV 5 y 6. Veremos los ejercicios de la NRV 7. Empezaremos el repaso de la NRV 8.</p>
+    </details>
+    
+  
+  </article>
+       <!--PARA CLASES JC CURSO AVANZADO
+
+    <details class="JC">
+    <summary>xxx <a href="xxx" target="_blank">Parte 1</a>&nbsp;&nbsp;<a href="xxx" target="_blank">Parte 2</a></summary>
+    <p>xxx</p>
+    </details>    
+
+     -->
+  <article id="articuloMF">
+    <h1>Matemática Financiera</h1>
+     <div id="bloc1" class="btn-group">
+      <button type="button" onclick = "expandirtodo()" style="margin-right:10px;border-radius: 50%;width:50px;text-align: center;padding:10px;">&#x25BC;</button>
+      <button type="button" onclick = "contraertodo()" style="margin-right:10px;border-radius: 50%;width:50px;text-align: center;padding:10px;">&#x25B2;</button>
+    </div>         
+     
+     <!--LINKS DE MATEMATICA FINANCIERA
+     -->
+
+    <details class="Laura">
+    <summary>varios</summary>
+    <p><a href="https://player.vimeo.com/video/752520192?#t=1m23s" target="_blank">Video</a> TAE</p>
+    </details> 
+    
+    <details class="Laura">
+    <summary>Rentas</summary>
+    <p><a href="https://player.vimeo.com/video/752520192?#t=51m30s" target="_blank">Video</a> Teoría</p>
+    <p><a href="https://player.vimeo.com/video/752520192?#t=1h05m25s" target="_blank">Video</a> Fórmulas y Ejemplo 1. Renta constante, pospagable, inmediata y temporal.</p>
+    <p><a href="https://player.vimeo.com/video/753827767?#t=1m30s" target="_blank">Video</a> Fórmulas y ejemplo 2. Renta constante, pospagable, inmediata y perpetua</p> 
+    <p><a href="https://player.vimeo.com/video/753827767?#t=7m16s" target="_blank">Video</a> Fórmulas y ejemplo 3. Renta constante, prepagable, inmediata y temporal.</p>    
+    <p><a href="https://player.vimeo.com/video/753827767?#t=33m13s" target="_blank">Video</a> Fórmulas y ejemplo 5. Renta constante, prepagable, inmediata y perpetua.</p>
+    <p><a href="https://player.vimeo.com/video/755104496?#t=2m56s" target="_blank">Video</a> Fórmulas y ejemplo 5. Renta diferida, temporal, pospagable y constante.</p>
+    <p><a href="https://player.vimeo.com/video/755104496?#t=18m38s" target="_blank">Video</a> Fórmulas y ejemplo 6. Renta diferida, temporal, prepagable y constante.</p>
+    <p><a href="https://player.vimeo.com/video/757553757?#t=2m10s" target="_blank">Video</a> Fórmulas y ejemplos 7 y 8. Renta constante, anticipada, temporal. Ejemplo 7 pospagable y Ejemplo 8 prepagable.</p> 
+    <p><a href="https://player.vimeo.com/video/758700855?#t=1m12s" target="_blank">Video</a> Fórmulas y ejemplos 9 y 10. Rentas variables. Progresión aritmética.</p> 
+    <p><a href="https://player.vimeo.com/video/759910861?#t=2m14s" target="_blank">Video</a> Rentas variables. Progresión aritmética. Prepagables. Ejemplo 11.</p> 
+    <p><a href="https://player.vimeo.com/video/759910861?#t=12m51s" target="_blank">Video</a> Rentas variables. Aritmética, Prepagable y Perpetua. Ejemplo 12</p> 
+    <p><a href="https://player.vimeo.com/video/759910861?#t=16m59s" target="_blank">Video</a> Renta variable en Progresión geométrica, temporal, inmediata y pospagable. Caso perpetua.Teoría.</p> 
+    <p><a href="https://player.vimeo.com/video/759910861?#t=27m42s" target="_blank">Video</a> Renta variable en Progresión geométrica, temporal, inmediata y pospagable. Ejercicio 13.</p> 
+    <p><a href="https://player.vimeo.com/video/759910861?#t=39m18s" target="_blank">Video</a> Renta variable en Progresión geométrica, perpetua, inmediata y pospagable. Ejercicio 14.</p> 
+    <p><a href="https://player.vimeo.com/video/759910861?#t=42m2s" target="_blank">Video</a> Renta variable con interés variable, inmediata y pospagable. Ejercicio 15.</p> 
+    </details>
+   
+  </article>
+
+         <!--PARA NUEVO TEMA MATEMATICAS FINANCIERA
+
+    <details>
+    <summary>XXX</summary>
+    <p hidden><a href="xxx" target="_blank">xxx</a> xxx</p>
+    <p hidden><a href="xxx" target="_blank">xxx</a> xxx</p>
+    </details>    
+
+     -->
+        
+  <article id="articuloCF">
+    <h1>Contabilidad Financiera</h1>
+     <div id="bloc1" class="btn-group">
+      <button type="button" onclick = "expandirtodo()" style="background-color:black;margin-right:10px;border-radius:50%;width:50px;text-align:center;padding:10px;">&#x25BC;</button>
+      <button type="button" onclick = "contraertodo()" style="background-color:black;margin-right:10px;border-radius:50%;width:50px;text-align:center;padding:10px;">&#x25B2;</button>
+      <button type="button" onclick = "soloLaura()" style="background-color:red;">Laura</button>
+      <button type="button" onclick = "soloJC()" style="background-color:blue;"">JC</button>
+      <button type="button" onclick = "ambos()">ambos</button>
+    </div>          
+         <!--LINKS DE CONTABILIDAD FINANCIERA
+     -->
+    
+    <details class="Laura">
+    
+    <summary>NRV 2-4. Supuestos Propuestos <a href="https://drive.google.com/file/d/1YCrCuT2oMAC2MlHUHzSygn3LbZBJzX-N/view?usp=sharing" target="_blank">(abrir pdf)</a></summary>
+    <p><a href="https://player.vimeo.com/video/752520192?#t=1h28m8s" target="_blank">Supuesto 2</a> Maquinaria en montaje. </p>
+    <p><a href="https://player.vimeo.com/video/753827779?#t=1h14m00s" target="_blank">Supuesto 3</a> Construcción en curso. Supuesto largo. <a href="https://player.vimeo.com/video/755104496?#t=1h26m24s" target="_blank">continuación</a></p>
+    <p><a href="https://player.vimeo.com/video/752520192?#t=1h56m43s" target="_blank">Supuesto 4</a> Permuta Comercial. </p>
+    <p><a href="https://player.vimeo.com/video/752520192?#t=2h7m24s" target="_blank">Supuesto 5</a> Permuta comercial</p>
+    <p><a href="https://player.vimeo.com/video/752520192?#t=2h30m35s" target="_blank">Supuesto 6</a> Permuta no comercial pasa a ser comercial.</p>
+    <p><a href="https://player.vimeo.com/video/752520192?#t=2h41m10s" target="_blank">Supuesto 7</a> Permuta no comercial pasa a ser comercial. Con IVA. Amortización dígitos decrecientes. <a href="https://player.vimeo.com/video/752520210?#t=49s" target="_blank">continuación</a></p>
+    <p><a href="https://player.vimeo.com/video/752520210?#t=15m51s" target="_blank">Supuestos 8 y 9</a> Sociedad receptora y Sociedad apórtante de terreno (aportación no dineraria (AND) para Ampliación de CS(ACS)) </p>
+    <p><a href="https://player.vimeo.com/video/752520210?#t=27m44s" target="_blank">Supuesto 10</a> Diferentes métodos de amortización. Método porcentaje constante sobre valor decreciente. Método suma dígitos decrecientes.</p>
+    <p><a href="https://player.vimeo.com/video/752520210?#t=55m11s" target="_blank">Supuesto 11</a> Amortización separada.</p>
+    <p><a href="https://player.vimeo.com/video/752520210?#t=1h21m26s" target="_blank">Supuesto 12</a> Deterioro de valor.</p>
+    <p><a href="https://player.vimeo.com/video/752520210?#t=1h33m50s" target="_blank">Supuesto 13</a> Ingresos de créditos (76) por enajenación de inmovilizado.</p>
+    <p><a href="https://player.vimeo.com/video/752520210?#t=1h51m03s" target="_blank">Supuesto 14</a> Deterioro de valor.</p>
+    <p><a href="https://player.vimeo.com/video/753827767?#t=1h16m20s" target="_blank">Supuesto 15</a> Deterioro.</p>
+    <p><a href="https://player.vimeo.com/video/753827767?#t=1h26m46s" target="_blank">Supuesto 16</a> Deterioro. Reversión del deterioro.</p>
+    <p><a href="https://player.vimeo.com/video/753827767?#t=1h56m28s" target="_blank">Supuesto 17</a> Provisión desmantelamiento (14)</p>
+    <p><a href="https://player.vimeo.com/video/753827767?#t=2h13m26s" target="_blank">Supuesto 18</a> NRV 3. Piezas de recambio (RICAC del Inmovilizado Material)</p>
+    <p><a href="https://player.vimeo.com/video/753827767?#t=2h43m48s" target="_blank">Supuesto 19</a> NRV 3. Utensilios y herramientas.</p>
+    <p><a href="https://player.vimeo.com/video/753827779?#t=58s" target="_blank">Supuesto 20</a> NRV 3. Mejora.</p>
+    <p><a href="https://player.vimeo.com/video/753827779?#t=22m49s" target="_blank">Supuesto 21</a> Renovación de inmovilizado con sustitución de elementos.</p>
+    <p><a href="https://player.vimeo.com/video/753827779?#t=38m58s" target="_blank">Supuesto 22</a> Mejora con costes de destrucción.</p>
+    <p><a href="https://player.vimeo.com/video/753827779?#t=59m26s" target="_blank">Supuesto 23</a> Mejora sobre Derecho sobre activos cedidos en uso (20). (Intangible). Inversión en activo no separable.</p>
+         <!--PARA NUEVO SUPUESTO
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+     -->
+
+    </details>
+
+    <details class="Laura">
+    <summary>NRV 2-4. Ejercicios del Documento Teórico <a href="https://drive.google.com/file/d/1Y9J6UUydbyVIrpEgUKgePXwvHdbl8f1g/view?usp=sharing" target="_blank">(abrir pdf)</a></summary>
+    <p><a href="https://player.vimeo.com/video/755104496?#t=2h13m57s" target="_blank">Ejercicio 18</a> Adquisición de maquinaria. Examen oficial</p>
+    <p><a href="https://player.vimeo.com/video/755104510?#t=1m15s" target="_blank">Ejercicio 19</a> Maquinaria en montaje. Reparación extraordinaria. Desmantelamiento. Supuesto largo. Examen Oficial.</p>
+
+         <!--PARA NUEVO SUPUESTO
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+     -->
+    </details>
+
+    <details  class="JC">
+    <summary>NRV 2-4. Ejercicios <a href="https://drive.google.com/file/d/1Y0mGwbqq0e338zwLnzvCjU_mY7PJRyis/view?usp=sharing" target="_blank">(abrir pdf)</a></summary>
+    <p><a href="https://player.vimeo.com/video/842625072?#t=3m12s" target="_blank">Ejercicio 1</a> Provisión Desmantelamiento. Nueva estimación.</p>
+    <p><a href="https://player.vimeo.com/video/842625072?#t=1h11m38s" target="_blank">Ejercicio 2</a> Provisión Desmantelamiento (incorporación durante la construcción de la maquinaria). Pruebas antes de puesta en funcionamiento.</p>
+    <p><a href="https://player.vimeo.com/video/842625072?#t=1h53m58s" target="_blank">Ejercicio 3</a> Provisión Desmantelamiento. Incremento vida útil.</p>
+    <p><a href="https://player.vimeo.com/video/842625072?#t=2h15m35s" target="_blank">Ejercicio 4</a> Adquisición de maquinaria con provisión por pagos contingentes.</p>
+    <p><a href="https://player.vimeo.com/video/842625072?#t=2h57m48s" target="_blank">Ejercicio 5 caso 1</a> Permuta ¿comercial o no?, análisis del deterioro. <a href="https://player.vimeo.com/video/842625093?#t=25s" target="_blank">continuación</a></p>
+    <p><a href="https://player.vimeo.com/video/842625093?#t=4m45s" target="_blank">Ejercicio 5 caso 2</a> Permuta no comercial.</p>
+    <p><a href="https://player.vimeo.com/video/842625093?#t=15m59s" target="_blank">Ejercicio 5 caso 3</a> Deterioro y permuta no comercial.</p>
+    <p><a href="https://player.vimeo.com/video/842625093?#t=35m54s" target="_blank">Ejercicio 5</a> Anticipos de inmovilizado.Gastos de prueba de inmovilizado.</p>
+    <p><a href="https://player.vimeo.com/video/842625093?#t=57m52s" target="_blank">Ejercicio 6</a> Ampliaciones y mejoras de construcción. RICAC Inmovilizado Material.</p>
+    <p><a href="https://player.vimeo.com/video/844733947?#t=?#t=4m23s" target="_blank">Ejercicio 7</a> Siniestro Inmovilizado Material.</p>
+    <p><a href="https://player.vimeo.com/video/844733947?#t=?#t=16m43s" target="_blank">Ejercicio 8</a> Baja por expropiación.</p>
+    <p><a href="https://player.vimeo.com/video/844733947?#t=34m32s" target="_blank">Ejercicio 9</a> Dación en pago con baja de deuda (ptmo italiano).</p>
+    <p><a href="https://player.vimeo.com/video/844733947?#t=44m2s" target="_blank">Ejercicio 10</a> Capitalización de gastos financieros. (Res. Inmov. Material y Res. Coste de producción).</p>
+    <p><a href="https://player.vimeo.com/video/844733947?#t=1h41m31s" target="_blank">Ejercicio 11</a> Capitalización de gastos financieros. Deuda que financia anticipo.</p>
+    <p><a href="https://player.vimeo.com/video/844733947?#t=1h56m10s" target="_blank">Ejercicio 12</a> Inversiones inmobiliarias. Deterioro. Reversión del Deterioro.</p>
+    <p><a href="https://player.vimeo.com/video/844733947?#t=2h25m5s" target="_blank">Ejercicio 13</a> Inversión inmobiliaria. Reclasificación a existencias.</p>
+    <p><a href="https://player.vimeo.com/video/844733947?#t=2h41m4s" target="_blank">Ejercicio 14</a> no lo resuelve en clase, dice que enviará la solución.</p>
+         <!--PARA NUEVO SUPUESTO
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+     -->
+
+    </details>
+
+    <details  class="JC">
+    <summary>Ejercicios consultas ICAC NRV 2-4 <a href="https://drive.google.com/file/d/1J-eUko2rV605Si9qNlexomPCHmLYRUA-/view?usp=sharing" target="_blank">(abrir pdf)</a></summary>
+    <p><a href="https://player.vimeo.com/video/844733947?#t=2h46m5s" target="_blank">Ejercicio 1</a> NRV 18. Subvención de capital. Resolución ICAC de deterioro. Deterioro parte irreversible por estar subvencionado.</p>
+    <p><a href="https://player.vimeo.com/video/844733961?#t=42s" target="_blank">Ejercicio 2</a> Compromiso rehabilitación al final del periodo concesional. Provisión por rehabilitación. Terreno que se amortiza.</p>
+    <p><a href="https://player.vimeo.com/video/844733961?#t=36m10s" target="_blank">Ejercicio 2 caso 2</a> Provisión por rehabilitación a medida que se desarrolla la actividad.</p>
+    <p><a href="https://player.vimeo.com/video/844733961?#t=54m5s" target="_blank">Ejercicio 3</a> Adquisición nuda propiedad, usufructo vitalicio. Provisión por nuda propiedad.</p>
+    <p><a href="https://player.vimeo.com/video/844733961?#t=1h8m35s" target="_blank">Ejercicio 4</a> Permuta de bienes totalmente amortizados. ¿comercial o no comercial?.</p>
+    <p><a href="https://player.vimeo.com/video/846735973?#t=5m" target="_blank">Ejercicio 4 apartado b)</a> </p>
+    
+    </details>
+
+   <details  class="JC">
+    
+    <summary>Ejercicios NRV 5-6 <a href="https://drive.google.com/file/d/1Y2b7vimUOXyYbokRvAD5rwrs6t6LLMkW/view?usp=sharing" target="_blank">(abrir pdf)</a></summary>
+    <p><a href="https://player.vimeo.com/video/846735973?#t=9m54s" target="_blank">Ejercicio 1</a> Investigación y Desarrollo. Ejercicio largo...</p>
+    <p><a href="https://player.vimeo.com/video/846735973?#t=1h31m3s" target="_blank">Ejercicio 2</a> Desarrollo aplicaciones informática con medios propios.</p>
+    <p><a href="https://player.vimeo.com/video/846735973?#t=1h54m59s" target="_blank">Ejercicio 3</a> Cesión derecho de uso gratuito. Inversiones sobre bienes en arrendamiento.</p>
+    <p><a href="https://player.vimeo.com/video/846735973?#t=2h11m57s" target="_blank">Ejercicio 3 caso 2</a> </p>
+    <p><a href="https://player.vimeo.com/video/846735973?#t=2h22m15s" target="_blank">Ejercicio 3 caso 3</a> </p>
+    <p><a href="https://player.vimeo.com/video/846735973?#t=2h25m10s" target="_blank">Ejercicio 4</a> Compra de una cartera de clientes con pagos contingentes.</p>
+    <p><a href="https://player.vimeo.com/video/846735990?#t=2m23s" target="_blank">Ejercicio 5</a> Commpra de una marca con pago contingente.</p>
+    <p><a href="https://player.vimeo.com/video/846735990?#t=12m37s" target="_blank">Ejercicio 6</a> Patente adquirida a terceros con pago contingente y deterioro.</p>
+    <p><a href="https://player.vimeo.com/video/846735990?#t=31m28s" target="_blank">Ejercicio 7</a> Publicidad.</p>    
+       <!--PARA NUEVO SUPUESTO
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+    <p><a href="xxx" target="_blank">xxx</a> xxx</p>
+     -->
+
+    </details>  
+  </article>
+  
+  <article id="articuloCS">
+    <h1>Videos CS</h1>
+    <p>Aquí irán los videos de Contabilidad de Sociedades</p>
+  </article>
+
+</section>
+        
+
+        
+</body>
+<script>
+//alert("message");
+const itemLaura = document.getElementById("itemLaura");
+const itemAvanzado = document.getElementById("itemAvanzado");
+const itemMF = document.getElementById("itemMF");
+const itemCF = document.getElementById("itemCF");
+const itemCS = document.getElementById("itemCS");
+
+const articuloLaura = document.getElementById("articuloLaura");
+const articuloAvanzado = document.getElementById("articuloAvanzado");
+const articuloMF = document.getElementById("articuloMF");
+const articuloCF = document.getElementById("articuloCF");
+const articuloCS = document.getElementById("articuloCS");
+
+itemLaura.addEventListener("click", () => {
+  contraertodo();  
+  articuloAvanzado.style.display = "none";
+  articuloMF.style.display = "none";
+  articuloCF.style.display = "none";
+  articuloCS.style.display = "none";
+  
+  articuloLaura.style.display = "block";
+});
+
+itemAvanzado.addEventListener("click", () => {
+  contraertodo();
+  articuloLaura.style.display = "none";
+  articuloMF.style.display = "none";
+  articuloCF.style.display = "none";
+  articuloCS.style.display = "none";
+  
+  articuloAvanzado.style.display = "block";
+});
+
+itemMF.addEventListener("click", () => {
+  contraertodo();
+  articuloLaura.style.display = "none";
+  articuloAvanzado.style.display = "none";
+  articuloCF.style.display = "none";
+  articuloCS.style.display = "none";
+  
+  articuloMF.style.display = "block";
+});
+
+itemCF.addEventListener("click", () => {
+  contraertodo();
+  ambos();
+  articuloLaura.style.display = "none";
+  articuloAvanzado.style.display = "none";
+  articuloMF.style.display = "none";
+  articuloCS.style.display = "none";
+  
+  articuloCF.style.display = "block";
+});
+
+itemCS.addEventListener("click", () => {
+  contraertodo();
+  articuloLaura.style.display = "none";
+  articuloAvanzado.style.display = "none";
+  articuloMF.style.display = "none";
+  articuloCF.style.display = "none";
+  
+  articuloCS.style.display = "block";
+});
+
+
+//funcion para toggle (expandir o contraer) todos los tags details
+
+
+function expandirtodo() {
+document.body.querySelectorAll('details')
+  .forEach((e) => {e.setAttribute('open',true);
+  })
+}
+
+function contraertodo() {
+document.body.querySelectorAll('details')
+  .forEach((e) => {(e.hasAttribute('open')) ?
+    e.removeAttribute('open') : e.removeAttribute('open');
+  })
+
+}
+
+function soloLaura() {
+contraertodo ();
+document.body.querySelectorAll(".JC")
+  .forEach(a=>a.style.display = "none");
+document.body.querySelectorAll(".Laura")
+  .forEach(a=>a.style.display = "block");
+}
+
+function soloJC() {
+contraertodo();
+document.body.querySelectorAll(".Laura")
+  .forEach(a=>a.style.display = "none");
+document.body.querySelectorAll(".JC")
+  .forEach(a=>a.style.display = "block");
+}
+
+function ambos() {
+contraertodo();
+document.body.querySelectorAll(".Laura")
+  .forEach(a=>a.style.display = "block");
+document.body.querySelectorAll(".JC")
+  .forEach(a=>a.style.display = "block");
+}
+
+
+</script>
+</html>
